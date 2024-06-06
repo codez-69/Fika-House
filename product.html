@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fika House</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <link rel="stylesheet" href="product.css">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<style>
+body {
+    font-family: 'Montserrat';font-size: 22px;
+}
+</style>
+<body>
+  <header>
+  <div class="container">
+      <div class="container1">
+        <a href="website.html" class="logo"></a>
+        <div class="hamburger">
+          <img src="ham.png" alt="Menu" class="hamburger-icon right" id="hamicon">
+        </div>
+        <img src="logo.png" onclick="window.location.href='website.html'" id = "logo" class = "center" alt="Fika house">
+        <a href="menu.html"><img src="order.png" class="left icon2" id="icon2"></a>
+        <img src="moon.png" class="left" id="icon1">
+      
+
+
+       </div>
+       <div class="container2">
+      <nav id="nav">
+        <ul class="nav-list">
+          <div>
+            <img src="lg.png" id = "navlogo" alt="Fika house">
+            <!-- Close icon inside the navbar -->
+    <img src="close.png" id="ci" class="close-icon" onclick="closeNavbar()" alt="Close">
+            </div>
+          <li><a href="website.html">Home</a></li>
+          <li><a href="#">Offers</a></li>
+          <li><a href="#" >Specials</a></li>
+          <li><button class="order-btn"><a href="#">Order</a><img src="icon.png" id="orderb" alt=""></button></li>
+          <li><img src="moon.png" id="icon"></li>
+        <div class="social">
+          <a>You can find us at </a>
+          <div>
+          <img src="insta.png" id = "sm1"  class="sm">
+          <img src="whts.png" id = "sm2" class="sm">
+          <img src="fb.png" id = "sm3"  class="sm">
+        </div>
+        </div>
+        
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="half-half-container">
+    <div class="text-half">
+        <nav class="breadcrumb">
+            <a href="#">Our Products</a>
+            <span>&gt;</span>
+            <a href="#">Cakes</a>
+        </nav>
+        <h2>CAKES</h2>
+        <p>Our cakes bring layers of joy (and rich buttercream frosting) to any occasion, with flavors for every type of sweets-lover. From classics to limited-time creations, all of our beautifully decorated cakes are made the old-fashioned way: from scratch and with love.This is the text-only half of the container. You can add more text here as needed.</p>
+    </div>
+    <div class="image-half">
+        <img src="propg.png" alt="Descriptive Alt Text">
+    </div>
+</div>
+
+    <div class="product-page-container">
+        <div class="sidebar">
+            <h2>Filter By</h2>
+            <button class="dropdown" onclick="toggleDropdown('dropdown1')">Flavour</button>
+            <div id="dropdown1" class="dropdown-content">
+                <a href="#" onclick="sortProducts('filter1Option1')">Chocolate</a>
+                <a href="#" onclick="sortProducts('filter1Option2')">vanilla</a>
+                <a href="#" onclick="sortProducts('filter1Option3')">Red velvet</a>
+            </div>
+        
+            <button class="dropdown" onclick="toggleDropdown('dropdown2')">Size</button>
+            <div id="dropdown2" class="dropdown-content">
+                <a href="#" onclick="sortProducts('filter2Option1')">1/2 Kg</a>
+                <a href="#" onclick="sortProducts('filter2Option2')">1 Kg</a>
+                <a href="#" onclick="sortProducts('filter2Option3')">2 Kg</a>
+            </div>
+        
+            <button class="dropdown" onclick="toggleDropdown('dropdown3')">layers</button>
+            <div id="dropdown3" class="dropdown-content">
+                <a href="#" onclick="sortProducts('filter3Option1')">1Layer</a>
+                <a href="#" onclick="sortProducts('filter3Option2')">2Layers</a>
+                <a href="#" onclick="sortProducts('filter3Option3')">3Layers</a>
+            </div>
+            <button id="clear-filters">Clear All Filters</button>
+        </div>
+       
+        <div class="products">
+            <div class="product clothing brand1 chocolate veg" id="product1" data-category="clothing" data-brand="brand1" data-price="99.99">
+              <a href="menu.html"> 
+              <img src="sample.png" alt="Product 1">
+                <h3>Product 1</h3>
+                <p>Description of Product 1.</p>
+                <p class="price">Starting at $99.99</p>
+              </a>
+            </div>
+            <div class="product electronics brand2 vanilla nonveg" id="product2" data-category="electronics" data-brand="brand2" data-price="149.99">
+              <a href="menu.html">   
+              <img src="proref.png" alt="Product 2">
+                <h3>Product 2</h3>
+                <p>Description of Product 2.</p>
+                <p class="price">Starting at $149.99</p>
+               </a>
+              </div>
+            <div class="product books brand3 chocolate veg" id="product3" data-category="books" data-brand="brand3" data-price="79.99">
+              <a href="menu.html"> 
+              <img src="sample.png" alt="Product 3">
+                <h3>Product 3</h3>
+                <p>Description of Product 3.</p>
+                <p class="price">Starting at $79.99</p>
+              </a>
+              </div>
+
+              
+            <!-- Add more products here -->
+            <div class="product clothing brand4 vanilla veg" id="product4" data-category="clothing" data-brand="brand1" data-price="99.99">
+              <a href="menu.html"> 
+              <img src="proref.png" alt="Product 1">
+              <h3>Product 1</h3>
+              <p>Description of Product 1.</p>
+              <p class="price">Starting at $99.99</p>
+              </a>
+          </div>
+          <div class="product electronics brand2 redvelvet nonveg" id="product5" data-category="electronics" data-brand="brand2" data-price="149.99">
+            <a href="menu.html"> 
+            <img src="sample.png" alt="Product 2">
+              <h3>Product 2</h3>
+              <p>Description of Product 2.</p>
+              <p class="price">Starting at $149.99</p>
+              </a>
+          </div>
+          <div class="product books brand3 chocolate veg" id="product6" data-category="books" data-brand="brand3" data-price="79.99">
+            <a href="menu.html"> 
+            <img src="proref.png" alt="Product 3">
+              <h3>Product 3</h3>
+              <p>Description of Product 3.</p>
+              <p class="price">Starting at $79.99</p>
+              </a>
+          </div>
+        </div>
+        <label class="switch1">
+          <input type="checkbox" id="toggleSlider1">
+          <span class="slider1"></span>
+        </label>
+        <label class="switch">
+          <input type="checkbox" id="toggleSlider">
+          <span class="slider"></span>
+        </label>
+    </div>
+  
+
+    <div class="newd">
+    <div class="newie">
+      <h2>Our Products </h2>
+      <p>Our assortment includes our fan-favorite cakes and cupcakes, world-famous banana pudding, and a host of other classic baked goods, seasonal treats, and more.</p>
+    </div>
+    
+    
+  <div class="carousel-container1">
+    <button class="carousel-control prev1">&#10094;</button>
+    <button class="carousel-control next1">&#10095;</button>
+    <div class="carousel1">
+      <div class="product-item1">
+        <img src="sample.png" alt="Product 1">
+        <h3>Cakes</h3>
+      </div>
+      <div class="product-item1">
+        <img src="proref2.png" alt="Product 2">
+        <h3>Best Sellers</h3>
+      </div>
+      <div class="product-item1">
+        <img src="proref.png" alt="Product 3">
+        <h3>Cookies</h3>
+      </div>
+      <div class="product-item1">
+        <img src="proref3.png" alt="Product 4">
+        <h3>Cupcakes</h3>
+      </div>
+      <div class="product-item1">
+        <img src="proref.png" alt="Product 5">
+        <h3>Brownies</h3>
+      </div>
+      <div class="product-item1">
+        <img src="proref.png" alt="Product 5">
+        <h3>Product 6</h3>
+      </div>
+      <!-- Add more product items as needed -->
+    </div>
+ 
+  </div>
+   </div> 
+
+
+
+    <div class="fft">
+      <div class="adj">
+      <h2>Create Your Custom Order</h2>
+      <p>Get the freshest Fika House cutomised goods right to you!Plus, enjoy benefits with cutomised order and get additional discount based on your order.</p>
+      <p class="fftimg"><button onclick="window.location.href='menu.html'" class="order1-btn"><a href="#">Order </a><img src="whts.png" id="orderb" alt=""></button></p>
+    </div>
+    </div>
+    
+    
+
+
+
+
+<footer class="footer">
+  <div class="footer-social">
+    <p>Follow us on:</p>
+    <div class="social-icons">
+      <a href="#"><img src="fb.png" alt="Facebook"></a> <!-- Facebook -->
+      <a href="#"><img src="whts.png" alt="Twitter"></a> <!-- Twitter -->
+      <a href="#"><img src="insta.png" alt="Instagram"></a> <!-- Instagram -->
+    </div>
+  </div>
+
+  <hr> <!-- Horizontal line to separate sections -->
+
+  <div class="footer-contact">
+    <h4>Reach us</h4>
+    <p>Phone: (123) 456-7890</p> <!-- Phone number -->
+    <p>Email: example@gmail.com</p> <!-- Gmail address -->
+  </div>
+
+  <hr> <!-- Horizontal line to separate sections -->
+
+  <div class="footer-copyright">
+    <p>&copy; 2024 Fika House Company. All rights reserved.</p> <!-- Copyright line -->
+  </div>
+</footer>
+
+
+  <script>
+    var icon = document.getElementById("icon");
+
+    
+
+    
+    icon.onclick = function(){
+      document.body.classList.toggle("dark-theme");
+     if(document.body.classList.contains("dark-theme")){
+      logo.src = "logo-light.png";
+      icon.src = "sun.png";
+      
+     }else{
+      logo.src = "logo.png";
+      icon.src = "moon.png";
+     }
+     
+    }
+
+
+    var icon1 = document.getElementById("icon1");
+    icon1.onclick = function(){
+      document.body.classList.toggle("dark-theme");
+     if(document.body.classList.contains("dark-theme")){
+      logo.src = "logo-light.png";
+      icon1.src = "sun.png";
+      hamicon.src = "ham1.png";
+      icon2.src = "order1.png";
+      sm3.src = "fb1.png";
+      sm2.src ="whts1.png";
+      sm1.src = "insta1.png";
+      orderb.src = "icon1.png";
+      cccc.src = "cc1.png";
+      bbbb.src = "bb1.png";
+      
+      
+
+     }else{
+      logo.src = "logo.png";
+      icon1.src = "moon.png";
+      hamicon.src = "ham.png";
+      icon2.src = "order.png";
+      sm3.src = "fb.png";
+      sm2.src ="whts.png";
+      sm1.src = "insta.png";
+      orderb.src = "icon.png";
+      cccc.src = "cc.png";
+      bbbb.src = "bb.png";
+
+     }
+    }
+
+    
+
+    document.addEventListener("DOMContentLoaded", function() {
+  var hamburgerIcon = document.getElementById("hamicon");
+  var navList = document.querySelector(".nav-list");
+
+  // Add event listener to the hamburger icon
+  hamburgerIcon.addEventListener("click", function() {
+    // Toggle the 'show' class on the nav list
+    navList.classList.toggle("show");
+  });
+}) ;
+
+function closeNavbar() {
+  // Hide the navbar
+  document.querySelector('.nav-list').classList.remove('show');
+  
+  // Go back to the previous page
+  window.history.back();
+}
+
+// Function to toggle dropdown visibility and update arrow icon
+function toggleDropdown(id) {
+    const dropdown = document.getElementById(id);
+    const button = dropdown.previousElementSibling;
+    dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+    button.classList.toggle('active');
+}
+
+// Function to sort products based on filter criteria
+function sortProducts(criteria) {
+    // Store the current scroll position
+    const scrollPosition = window.scrollY;
+
+    const products = Array.from(document.getElementsByClassName('product'));
+
+    // Show all products initially
+    products.forEach(product => {
+        product.style.display = 'block';
+    });
+
+    // Apply sorting based on criteria
+    if (criteria === 'filter1Option1') { // Chocolate
+        products.forEach(product => {
+            if (!product.classList.contains('chocolate')) {
+                product.style.display = 'none';
+            }
+        });
+    } else if (criteria === 'filter1Option2') { // Vanilla
+        products.forEach(product => {
+            if (!product.classList.contains('vanilla')) {
+                product.style.display = 'none';
+            }
+        });
+    } else if (criteria === 'filter1Option3') { // Red Velvet
+        products.forEach(product => {
+            if (!product.classList.contains('redvelvet')) {
+                product.style.display = 'none';
+            }
+        });
+    } // Add more sorting logic for other filters if needed
+
+    // Restore the scroll position
+    window.scrollTo(0, scrollPosition);
+}
+
+// Function to clear all filters and sorting
+function clearFilters() {
+    const products = Array.from(document.getElementsByClassName('product'));
+
+    // Show all products
+    products.forEach(product => {
+        product.style.display = 'block';
+    });
+
+    // Reset dropdowns
+    const dropdowns = document.getElementsByClassName('dropdown-content');
+    Array.from(dropdowns).forEach(dropdown => {
+        dropdown.style.display = 'none';
+        dropdown.previousElementSibling.classList.remove('active');
+    });
+}
+
+// Event listener for filter links to prevent default anchor behavior
+const filterLinks = document.querySelectorAll('.dropdown-content a');
+filterLinks.forEach(link => {
+    link.addEventListener('click', function(event) {
+        event.preventDefault();
+        sortProducts(this.getAttribute('onclick').match(/'(.*)'/)[1]);
+    });
+});
+
+// Event listener for Clear All Filters button
+document.getElementById('clear-filters').addEventListener('click', function() {
+    clearFilters();
+});
+
+// Event listener for toggle sliders
+document.getElementById('toggleSlider').addEventListener('change', function() {
+    filterProducts();
+});
+
+document.getElementById('toggleSlider1').addEventListener('change', function() {
+    filterProducts();
+});
+
+// Function to filter products based on toggle slider state
+function filterProducts() {
+    const toggleSliderChecked = document.getElementById('toggleSlider').checked;
+    const toggleSlider1Checked = document.getElementById('toggleSlider1').checked;
+
+    const products = Array.from(document.getElementsByClassName('product'));
+
+    // Apply filtering based on toggle sliders
+    products.forEach(product => {
+        const isVeg = product.classList.contains('nonveg');
+        const isNonVeg = product.classList.contains('veg');
+
+        // Check if product should be displayed based on current toggle slider states
+        if ((toggleSliderChecked && isVeg) || (toggleSlider1Checked && isNonVeg)) {
+            product.style.display = 'block';
+        } else {
+            product.style.display = 'none';
+        }
+
+        // Show all products if both sliders are turned on
+        if (toggleSliderChecked && toggleSlider1Checked) {
+            product.style.display = 'block';
+        }
+    });
+
+    // Show all products if both sliders are turned off
+    if (!toggleSliderChecked && !toggleSlider1Checked) {
+        products.forEach(product => {
+            product.style.display = 'block';
+        });
+    }
+}
+
+// Function to clear all filters and sorting
+function clearFilters() {
+    const products = Array.from(document.getElementsByClassName('product'));
+
+    // Reset toggle sliders
+    document.getElementById('toggleSlider').checked = false;
+    document.getElementById('toggleSlider1').checked = false;
+
+    // Show all products
+    products.forEach(product => {
+        product.style.display = 'block';
+    });
+
+    // Reset dropdowns if needed
+    const dropdowns = document.getElementsByClassName('dropdown-content');
+    Array.from(dropdowns).forEach(dropdown => {
+        dropdown.style.display = 'none';
+        dropdown.previousElementSibling.classList.remove('active');
+    });
+}
+
+// Event listener for Clear All Filters button
+document.getElementById('clear-filters').addEventListener('click', function() {
+    clearFilters();
+    filterProducts(); // Apply filter reset immediately
+});
+
+// Initial filter application
+filterProducts();
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const carousel = document.querySelector('.carousel1');
+  const prevButton = document.querySelector('.carousel-control.prev1');
+  const nextButton = document.querySelector('.carousel-control.next1');
+  const itemsToShow = 4;
+  const cardMargin = 20; // margin on each side of the card
+  let cardWidth;
+
+  function updateCardWidth() {
+    const carouselWidth = carousel.offsetWidth;
+    cardWidth = (carouselWidth - (cardMargin * (itemsToShow - 1))) / itemsToShow;
+    document.querySelectorAll('.product-item1').forEach(item => {
+      item.style.width = `${cardWidth}px`;
+      item.style.marginRight = `${cardMargin}px`;
+    });
+  }
+
+  function cloneItems() {
+    const items = document.querySelectorAll('.product-item1');
+    items.forEach(item => {
+      const clone = item.cloneNode(true);
+      carousel.appendChild(clone);
+    });
+    items.forEach(item => {
+      const clone = item.cloneNode(true);
+      carousel.insertBefore(clone, carousel.lastChild);
+    });
+  }
+
+  cloneItems();
+  updateCardWidth();
+
+  window.addEventListener('resize', function() {
+    updateCardWidth();
+    updateCarousel();
+  });
+
+  let scrollPosition = -cardWidth * itemsToShow;
+  const totalItems = document.querySelectorAll('.product-item1').length / 3; // adjust for cloning
+
+  function updateCarousel() {
+    carousel.style.transition = 'transform 0.5s ease';
+    carousel.style.transform = `translateX(${scrollPosition}px)`;
+  }
+
+  nextButton.addEventListener('click', function() {
+    scrollPosition -= cardWidth + cardMargin;
+    updateCarousel();
+
+    if (scrollPosition <= -(cardWidth * totalItems + cardWidth * itemsToShow)) {
+      setTimeout(() => {
+        carousel.style.transition = 'none';
+        scrollPosition = -cardWidth * itemsToShow;
+        carousel.style.transform = `translateX(${scrollPosition}px)`;
+        setTimeout(() => {
+          carousel.style.transition = 'transform 0.5s ease';
+        }, 50);
+      }, 500); // transition duration
+    }
+  });
+
+  prevButton.addEventListener('click', function() {
+    scrollPosition += cardWidth + cardMargin;
+    updateCarousel();
+
+    if (scrollPosition >= 0) {
+      setTimeout(() => {
+        carousel.style.transition = 'none';
+        scrollPosition = -cardWidth * totalItems;
+        carousel.style.transform = `translateX(${scrollPosition}px)`;
+        setTimeout(() => {
+          carousel.style.transition = 'transform 0.5s ease';
+        }, 50);
+      }, 500); // transition duration
+    }
+  });
+
+  // Initial position
+  carousel.style.transition = 'none';
+  carousel.style.transform = `translateX(${scrollPosition}px)`;
+});
+
+  </script>
+</body>
+</html>
